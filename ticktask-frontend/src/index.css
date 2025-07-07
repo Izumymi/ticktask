@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌿 Переменные для темы */
+:root {
+  --main-bg: #f9fafb;
+  --main-text: #1f2937;
+}
+
+/* 🌐 Базовая стилизация страницы */
+body {
+  @apply min-h-screen bg-white text-gray-800 antialiased;
+}
+
+/* 🔗 Ссылки */
+a {
+  @apply text-blue-600 hover:underline;
+}
+
+/* 🔘 Кнопки */
+button {
+  @apply px-4 py-2 rounded bg-blue-500 text-white font-semibold hover:bg-blue-600 transition;
+}
+
+/* ✨ Анимация появления */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out both;
+}
